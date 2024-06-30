@@ -11,15 +11,17 @@ $this->title = $name;
 ?>
 <div class="site-error">
 
-    <h1>Truy cập bị từ chối</h1>
+    <h1><?= Html::encode($this->title) ?></h1>
 
     <div class="alert alert-danger">
-        <h5>Bạn không có quyền truy cập trang này !</h5>
+        <?= nl2br(Html::encode($message)) ?>
     </div>
 
     <p>
-        Hãy đăng nhập với quyền của người quản trị
+        The above error occurred while the Web server was processing your request.
     </p>
-
+    <p>
+        Please contact us if you think this is a server error. Thank you.
+    </p>
 
 </div>

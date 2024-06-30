@@ -213,13 +213,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $products = Product::find()
-            ->limit(40)
-            ->all();
-
-        return $this->render("index", [
-            "products" => $products,
-        ]);
+        return $this->render("index");
     }
 
     /**
